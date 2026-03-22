@@ -135,6 +135,7 @@ const fixStaticIcons = function () {
 };
 
 const init = function () {
+  fixStaticIcons(); // must run first
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
@@ -143,6 +144,5 @@ const init = function () {
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
   console.log('Welcome back!!!');
-  fixStaticIcons();
 };
 init();
