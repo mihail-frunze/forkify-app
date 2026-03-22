@@ -126,6 +126,13 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
+const fixStaticIcons = function () {
+  document.querySelectorAll('use[href^="src/img/icons.svg"]').forEach(useEl => {
+    const iconId = useEl.getAttribute('href').split('#')[1];
+    useEl.setAttribute('href', `${icons}#${iconId}`);
+  });
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
@@ -135,5 +142,6 @@ const init = function () {
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
   console.log('Welcome back!!!');
+  fixStaticIcons();
 };
 init();
