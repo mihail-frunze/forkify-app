@@ -28,7 +28,7 @@ class PaginationView extends View {
         <button data-goto="${curPage + 1}" class="btn--inline pagination__btn--next">
             <span>Page ${curPage + 1}</span>
             <svg class="search__icon">
-              <use href="${icons}#icon-arrow-right"></use>
+              <use href="${icons}#icon-arrow-right" xlink:href="${icons}#icon-arrow-right"></use>
             </svg>
           </button>
           `;
@@ -39,7 +39,7 @@ class PaginationView extends View {
       return `
             <button data-goto="${curPage - 1}" class="btn--inline pagination__btn--prev">
             <svg class="search__icon">
-              <use href="${icons}#icon-arrow-left"></use>
+              <use href="${icons}#icon-arrow-left" xlink:href="${icons}#icon-arrow-left"></use>
             </svg>
             <span>Page ${curPage - 1}</span>
           </button>
@@ -51,14 +51,14 @@ class PaginationView extends View {
       return `
             <button data-goto="${curPage - 1}" class="btn--inline pagination__btn--prev">
             <svg class="search__icon">
-              <use href="${icons}#icon-arrow-left"></use>
+              <use href="${icons}#icon-arrow-left" xlink:href="${icons}#icon-arrow-left"></use>
             </svg>
             <span>Page ${curPage - 1}</span>
           </button>
           <button data-goto="${curPage + 1}" class="btn--inline pagination__btn--next">
             <span>Page ${curPage + 1}</span>
             <svg class="search__icon">
-              <use href="${icons}#icon-arrow-right"></use>
+              <use href="${icons}#icon-arrow-right" xlink:href="${icons}#icon-arrow-right"></use>
             </svg>
           </button>
       `;
